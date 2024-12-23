@@ -1,0 +1,255 @@
+/* fonts */
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/Lato-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../fonts/Lato-Bold.woff2") format("woff2"),
+    url("../fonts/Lato-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* custom properties */
+:root {
+  /* colors */
+  --primary-color: #01996d;
+  --primary-20-color: #01996d33;
+  --secondary-color: #245852;
+  --text-color: #424242;
+  --black-color: #000;
+  --white-color: #fff;
+  --nav-link-color: #292929;
+  --gray-color: #d6d6d6;
+
+  /* bg colors */
+  --white-bg-color: #fff;
+
+  /* fonts */
+  --text-font: "Lato", "Arial", sans-serif;
+  --georgia: "Georgia", serif;
+}
+
+/* global styles */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--text-font);
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  background-color: var(--white-bg-color);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--georgia);
+  font-weight: 700;
+}
+button {
+  border: 0;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  background-color: transparent;
+  cursor: pointer;
+}
+.container {
+  width: 100%;
+  max-width: calc(1370px + 2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.primary-btn {
+  line-height: 1.25;
+  font-weight: 400;
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border-radius: 4px;
+  padding: 1.25rem 3.125rem;
+  text-transform: capitalize;
+  display: inline-flex;
+}
+.primary-btn:hover {
+  opacity: 0.8;
+}
+.primary-btn:active {
+  opacity: 0.6;
+}
+
+/* navbar styles */
+.navbar {
+  padding: 1.063rem 0;
+  border-bottom: 1px solid var(--gray-color);
+}
+.navbar .container {
+  display: flex;
+  align-items: center;
+}
+.navbar-logo {
+  display: flex;
+  margin-right: 10.75rem;
+}
+.navbar-logo:hover svg path {
+  fill: var(--secondary-color);
+}
+.sitenav {
+  margin-right: auto;
+}
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  gap: 4.5rem;
+}
+.sitenav-link {
+  color: var(--nav-link-color);
+}
+.sitenav-link:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.navbar-signin {
+  color: var(--black-color);
+  margin-right: 2.188rem;
+}
+.navbar-signin:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.navbar-btn {
+  padding: 0.813rem 3.125rem;
+}
+.toggle-navbar {
+  border: 1px solid var(--primary-color);
+  border-radius: 6px;
+  padding: 0.4rem 0.6rem;
+  color: var(--primary-color);
+  display: none;
+}
+
+/* main section styles */
+main {
+  flex-grow: 1;
+}
+
+/* hero section styles */
+.hero {
+  padding-top: 10.938rem;
+  padding-bottom: 21rem;
+  background-image: url("../images/jpg/hero-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top right;
+}
+.hero-content {
+  width: 100%;
+  max-width: 440px;
+}
+.hero-title {
+  font-size: 4.063rem;
+  line-height: 1.13;
+  color: var(--primary-color);
+  margin-bottom: 1.875rem;
+}
+.hero-text {
+  width: 100%;
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
+/* extra large */
+@media (max-width: 1536px) {
+}
+/* large */
+@media (max-width: 1280px) {
+  .navbar-logo {
+    margin-right: 0;
+  }
+  .navbar .container {
+    justify-content: space-between;
+  }
+  .sitenav {
+    margin-right: 0;
+  }
+  .navbar-signin {
+    margin-right: 0;
+  }
+  .hero {
+    background-image: linear-gradient(#ffffff77, #ffffff77),
+      url("../images/jpg/hero-bg.jpg");
+  }
+}
+/* medium */
+@media (max-width: 1024px) {
+  .navbar .container {
+    justify-content: start;
+    gap: 1rem;
+  }
+  .navbar-logo {
+    margin-right: auto;
+  }
+  .sitenav {
+    display: none;
+  }
+  .navbar-signin {
+    display: none;
+  }
+  .toggle-navbar {
+    display: flex;
+  }
+  .hero-content {
+    max-width: 600px;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .hero-text {
+    max-width: 100%;
+  }
+}
+/* small */
+@media (max-width: 768px) {
+  .hero {
+    padding: 9rem 0;
+    background-position: center center;
+  }
+  .hero-title {
+    font-size: 3rem;
+  }
+}
+/* extra small */
+@media (max-width: 640px) {
+  html {
+    font-size: 80%;
+  }
+}
