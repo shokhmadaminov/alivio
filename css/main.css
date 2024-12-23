@@ -106,6 +106,20 @@ button {
 .primary-btn:active {
   opacity: 0.6;
 }
+.secondary-text {
+  font-family: var(--text-font);
+  font-weight: 600;
+  font-size: 1.563rem;
+  line-height: 1.2;
+  color: var(--text-color);
+}
+.section-title {
+  font-family: var(--georgia);
+  font-size: 3.125rem;
+  font-weight: 700;
+  line-height: 1.57;
+  color: var(--primary-color);
+}
 
 /* navbar styles */
 .navbar {
@@ -187,6 +201,25 @@ main {
   margin-bottom: 2rem;
 }
 
+/* works section styles */
+.works {
+  padding: 10.625rem 0 3.125rem;
+}
+.works-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.works-title {
+  width: 100%;
+  max-width: 584px;
+}
+.works-text {
+  width: 100%;
+  max-width: 670px;
+}
+
 /* extra large */
 @media (max-width: 1536px) {
 }
@@ -236,9 +269,23 @@ main {
   .hero-text {
     max-width: 100%;
   }
+  .works {
+    padding: 8rem 0 3rem;
+  }
+  .works-top {
+    flex-direction: column;
+    text-align: center;
+  }
+  .works-subtitle {
+    display: block;
+    text-align: center;
+  }
 }
 /* small */
 @media (max-width: 768px) {
+  .section-title {
+    font-size: 2.4rem;
+  }
   .hero {
     padding: 9rem 0;
     background-position: center center;
@@ -251,5 +298,8 @@ main {
 @media (max-width: 640px) {
   html {
     font-size: 80%;
+  }
+  .works {
+    padding: 4rem 0 4rem;
   }
 }
