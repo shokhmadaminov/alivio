@@ -414,6 +414,32 @@ main {
   margin-bottom: 2.5rem;
 }
 
+/* footer styles */
+.footer {
+  background-color: var(--secondary-color);
+  padding: 5.938rem 0 9rem;
+}
+.footer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-nav {
+  width: 100%;
+  max-width: 800px;
+  color: var(--white-color);
+}
+.footer-nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.footer-nav-link {
+  color: var(--white-color);
+}
+
 /* extra large */
 @media (max-width: 1536px) {
 }
@@ -581,6 +607,13 @@ main {
   }
   .our-product-text {
     margin-bottom: 1rem;
+  }
+  .footer .container {
+    align-items: flex-start;
+  }
+  .footer-nav-list {
+    align-items: flex-start;
+    flex-direction: column;
   }
 }
 
